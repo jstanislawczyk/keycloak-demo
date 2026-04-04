@@ -1,0 +1,28 @@
+# IDE
+.idea/*
+.vscode/*
+
+# NPM
+node_modules
+
+# Lock
+.yarn/*
+
+# Turbo
+.turbo
+**/.turbo
+
+# Dist
+server/dist
+public/dist
+dist
+dist-ssr
+deployment/backend/artifacts/**/*
+
+# Logs
+*.log
+
+.DS_Store
+*.local
+.env
+.cache
