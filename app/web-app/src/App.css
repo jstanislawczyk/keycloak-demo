@@ -11,3 +11,18 @@
     gap: 18px;
   }
 }
+
+.links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  padding: 5px 15px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
