@@ -7,17 +7,20 @@ import Admin from './pages/admin/Admin.tsx';
 import Authenticated from './pages/authenticated/Authenticated.tsx';
 import Public from './pages/public/Public.tsx';
 import Login from './pages/login/Login.tsx';
+import { KeycloakProvider } from './providers/keycloak/keycloak.provider.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/public" element={<Public />} />
-        <Route path="/authenticated" element={<Authenticated />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
-    </BrowserRouter>
+    <KeycloakProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/public" element={<Public />} />
+          <Route path="/authenticated" element={<Authenticated />} />
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
+      </BrowserRouter>
+    </KeycloakProvider>
   </StrictMode>,
 );
