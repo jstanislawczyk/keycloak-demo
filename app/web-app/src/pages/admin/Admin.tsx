@@ -1,4 +1,12 @@
+import useKeycloak from '../../hooks/useKeycloak.hook';
+
 function Admin() {
+  const { keycloak } = useKeycloak();
+
+  if (!keycloak?.hasResourceRole('READ_USER')) {
+    return 'Admin restricted';
+  }
+
   return (
     <>
       <section id="center">
