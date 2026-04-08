@@ -25,9 +25,14 @@ function App() {
                 Logout
               </button>
             ) : (
-              <button className="link" onClick={() => keycloak?.login()}>
-                Login
-              </button>
+              <>
+                <button className="link" onClick={() => keycloak?.login()}>
+                  Login
+                </button>
+                <button className="link" onClick={() => keycloak?.register()}>
+                  Register
+                </button>
+              </>
             )}
           </div>
         </div>
